@@ -1,0 +1,33 @@
+header {
+  background-color: red;
+  width: 100%;
+  height: 200px;
+}
+
+aside {
+  background-color: blue;
+  width: 30%;
+  height: 500px;
+}
+
+footer {
+  background-color: purple;
+  width: 100%;
+  height: 200px;
+}
+
+.create-form {
+  width: 80%;
+  padding: 15px 20px 0px 20px;
+  box-sizing: border-box;
+  background: var(--blue);
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.post-box {
+  display: flex;
+  flex-direction: row;
+}
