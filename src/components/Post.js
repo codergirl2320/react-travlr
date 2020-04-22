@@ -33,7 +33,7 @@ class Post extends React.Component {
             <li onClick={() => {this.props.handleDelete(this.props.postData.id)}}>Delete Entry</li>
           </ul>
         <div>
-          <button onClick={this.likePost}>$hearts;</button>
+          <button onClick={this.likedPost}>&hearts;</button>
           <p>{this.state.likes}</p>
         </div>
         </div>

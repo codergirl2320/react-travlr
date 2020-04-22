@@ -6,9 +6,9 @@ import Form from './Form.js'
 let defaultURL = '';
 
 if(process.env.NODE_ENV === 'development'){
-  defaultURL = 'http://localhost:3000'
+  defaultURL = 'http://localhost:8888'
 } else {
-  defaultURL = 'https://travlr-php.herokuapp.com'
+  defaultURL = 'https://cors-anywhere.herokuapp.com/http://travlr-php.herokuapp.com'
 }
 
 class Main extends React.Component {
@@ -92,4 +92,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main
+export default Main;

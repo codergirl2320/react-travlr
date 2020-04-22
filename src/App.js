@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       view: {
-        page: 'home',
+        pageName: 'home',
         pageTitle: 'Oh, the places I have been...',
       },
       formInputs: {
@@ -57,7 +57,7 @@ class App extends React.Component {
     }
     this.setState({
       view: {
-        page: view,
+        pageName: view,
         pageTitle: pageTitle
       },
       formInputs: formInputs
