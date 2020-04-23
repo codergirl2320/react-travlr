@@ -4,6 +4,7 @@ class Footer extends React.Component {
   render(){
     return(
       <footer className="footer">
+      <h1>last thing being added as a test</h1>
       </footer>
     )
   }
