@@ -39,25 +39,25 @@ class Form extends React.Component {
 
   render() {
     return(
-      <form className="create-form" onSubmit={this.handleSubmit}>
+      <form className="form-container" onSubmit={this.handleSubmit}>
         <label>
-          <input type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/><br/>
         </label>
 
         <label>
-          <textarea placeholder="body" id="body" value={this.state.body} onChange={this.handleChange}></textarea><br/>
+          <textarea className="story-form-input" placeholder="body" id="body" value={this.state.body} onChange={this.handleChange}></textarea><br/>
         </label>
 
         <label>
-          <input type="text" placeholder="location" id="location" value={this.state.location} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="location" id="location" value={this.state.location} onChange={this.handleChange}/><br/>
         </label>
 
         <label>
-          <input type="text" placeholder="image url" id="image" value={this.state.image} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="image url" id="image" value={this.state.image} onChange={this.handleChange}/><br/>
         </label>
 
         <label>
-          <input type="text" placeholder="year" id="year" value={this.state.year} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="year" id="year" value={this.state.year} onChange={this.handleChange}/><br/>
         </label>
 
         <input type="submit" value="share"/><br/>
