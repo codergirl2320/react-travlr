@@ -102,8 +102,7 @@ body {
 }
 
 .form-container {
-  grid-area: aside;
-  background-color: var(--gold);
+
 }
 
 .form-input {

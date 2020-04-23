@@ -6,12 +6,21 @@ import Aside from './components/Aside.js'
 import Footer from './components/Footer.js'
 import Nav from './components/Nav.js'
 
+let defaultURL = '';
+
+if(process.env.NODE_ENV === 'development'){
+  defaultURL = 'http://localhost:8888'
+} else {
+  defaultURL = 'https://cors-anywhere.herokuapp.com/http://travlr-php.herokuapp.com'
+}
+
 class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      posts: [],
       view: {
-        pageName: 'home',
+        pageName: 'gallery',
         pageTitle: 'Oh, the places I have been...',
       },
       formInputs: {
@@ -36,14 +45,14 @@ class App extends React.Component {
       year: ''
     }
     switch (view) {
-      case 'home':
-        pageTitle = 'Oh, the places I have been...'
+      case 'quote':
+        pageTitle = ''
         break
       case 'addPost':
         pageTitle = 'Where did you go this time?'
         break
       case 'editPost':
-        pageTitle = 'Where did you really go?'
+        pageTitle = 'Edit Post'
         formInputs = {
           id: postData.id,
           title: postData.title,
@@ -64,13 +73,96 @@ class App extends React.Component {
       formInputs: formInputs
     })
   }
+
+  handleViewTwo = (view, postData) => {
+    let pageTitle = ''
+
+    switch (view) {
+      case 'gallery':
+        pageTitle = 'Oh, the places I have been...'
+        break
+      case 'home':
+        pageTitle = ''
+        break
+      default:
+        break
+    }
+    this.setState({
+      view: {
+        pageName: view,
+        pageTitle: pageTitle
+      }
+    })
+  }
+
+  handleCreate = (createdData) => {
+    fetch(`${defaultURL}/posts`, {
+      body: JSON.stringify(createdData),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(createdPost => {
+      return createdPost.json()
+    }).then(jsonedPost => {
+      this.handleView('quote')
+      this.setState(prevState => {
+        prevState.posts = jsonedPost
+        return {posts: prevState.posts
+        }
+      })
+    }).catch(err=>console.log(err))
+  }
+
+  fetchPosts = () => {
+    fetch(`${defaultURL}/posts`)
+    .then(data => data.json())
+    .then(jData => {
+      this.setState({posts:jData})
+    }).catch(err=>console.log(err))
+  }
+
+  componentDidMount(){
+    this.fetchPosts()
+  }
+
+  handleUpdate = (updatedData) => {
+    fetch(`${defaultURL}/posts/${updatedData.id}`, {
+      body: JSON.stringify(updatedData),
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(updatedPost => {
+      this.props.handleView('gallery')
+      this.fetchPosts()
+    }).catch(err => console.log(err))
+  }
+
+  handleDelete = (id) => {
+    fetch(`${defaultURL}/posts/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    }).then(json => {
+      this.setState(prevState => {
+        const posts = prevState.posts.filter(post => post.id !== id)
+        return {posts}
+      })
+    }).catch(err => console.log(err))
+  }
+
   render() {
     return (
       <div className='full-container'>
         <Header/>
         <Nav handleView={this.handleView}/>
-        <Aside handleView={this.handleView}/>
-        <Main view={this.state.view} handleView={this.handleView} formInputs={this.state.formInputs}/>
+        <Aside view={this.state.view} handleView={this.handleView} formInputs={this.state.formInputs} handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete}/>
+        <Main view={this.state.view} handleView={this.handleView} formInputs={this.state.formInputs} posts={this.state.posts} handleDelete={this.handleDelete}/>
         <Footer/>
       </div>
     )
