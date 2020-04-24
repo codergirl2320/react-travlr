@@ -2,6 +2,7 @@
 /*  IMPORTED FONTS   */
 /* ================= */
 @import url('https://use.typekit.net/ftp0zfd.css');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Didact+Gothic&family=Montserrat:wght@400;500&family=Spartan:wght@400;500;600&display=swap');
 
 /* ================= */
 /*     VARIABLES     */
@@ -9,6 +10,7 @@
 :root {
 /* fonts */
 --title-font: 'p22-cezanne-pro', sans-serif;
+--body-font: 'Montserrat', sans-serif;
 /* colors */
 --ltaqua: #C2D9CB;
 --dkaqua: #9AADA2;
@@ -80,6 +82,7 @@ html, body {
   color: white;
   text-transform: uppercase;
   align-self: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ================= */
@@ -102,9 +105,93 @@ html, body {
 /* ================= */
 /*       FORM        */
 /* ================= */
+.form-container {
+  width: 100%;
+  padding: 15px 10px 0px 10px;
+  box-sizing: border-box;
+  background: var(--ltbrown);
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
 
+label {
+  display: inline-block;
+  width: 75%;
+  margin: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--body-font);
+  color: var(--dkaqua);
+}
 
+.form-input {
+  background-color: white;
+  border: none;
+  height: 40px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1vw;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: var(--body-font);
+  margin: 5px;
+}
 
+.story-form-input {
+  color: var(--dkaqua);
+  background-color: white;
+  border: none;
+  width: 100%;
+  height: 175px;
+  outline: none;
+  vertical-align: middle;
+  border-radius: 5px;
+  font-size: 1vw;
+  padding: 10px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: var(--body-font);
+  margin: 5px;
+}
+
+input[type="text"] {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 5px;
+  color: var(--dkaqua);
+}
+
+input[type="submit"] {
+  display: inline-block;
+  border: 0;
+  border: 3px solid var(--dkbrown);
+  background: white;
+  color: var(--dkbrown);
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 40%;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  margin: 5px;
+}
+input[type="submit"]:hover {
+  background-color: var(--ltaqua);
+  cursor: pointer;
+}
+
+::placeholder {
+  font-family: var(--body-font);
+  color: var(--ltaqua);
+}
 
 /* ================= */
 /*       MAIN        */
@@ -114,34 +201,40 @@ html, body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 150px 150px 150px 150px;
   grid-template-areas: "one two five five"
-                       "three three six six"
-                       "four four six six"
-                       "four four seven eight";
+                       "three two six six"
+                       "four nine six six"
+                       "four ten seven eight";
+}
+
+.home-grid img {
+  width: 100%;
 }
 
 .one {
-  background-color: black;
-  height: 150px;
+  background-color: var(--gold);
   grid-area: one;
 }
 
 .two {
-  background-color: red;
-  height: 150px;
   grid-area: two;
+  overflow: hidden;
 }
 
 .three {
-  background-color: blue;
-  height: 150px;
-  grid-area: eight;
+  background-color: var(--dkbrown);
+  grid-area: three;
 }
 
-.gallery-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  grid-area: main;
+.six {
+  grid-area: six;
+  overflow: hidden;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "maintwo";
 }
 
 .gallery-post {
@@ -149,7 +242,7 @@ html, body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: 98%;
   height: 300px;
   margin: 10px;
   padding: 15px;
@@ -159,12 +252,8 @@ html, body {
   border: 3px solid var(--dkbrown);
 }
 
-.gallery-image {
-  align-content: center;
-}
-
 .gallery-image img {
-  /* width: 400px; */
+  width: 400px;
   height: 260px;
   align-content: center;
 }
@@ -178,7 +267,17 @@ html, body {
   font-family: var(--title-font);
   font-weight: 200;
   font-style: normal;
+  font-size: 4vw;
+  margin: 5px auto;
+  line-height: 20px;
+}
+
+.gallery-info h2 {
+  font-family: var(--title-font);
+  font-weight: 200;
+  font-style: normal;
   font-size: 2vw;
+    margin: 5px auto;
 }
 
 .gallery-actions {
@@ -187,6 +286,11 @@ html, body {
   justify-content: space-around;
   list-style: none;
   margin: 0 10px;
+}
+
+.gallery-actions h4 {
+  margin: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ================= */
