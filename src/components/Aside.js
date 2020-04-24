@@ -6,8 +6,7 @@ class Aside extends React.Component {
   render(){
     return(
       <aside className="aside">
-
-        {this.props.view.pageName === 'addPost' ?
+        {this.props.view.pageName === 'addPost' || this.props.view.pageName === 'editPost' ?
           <Form handleCreate={this.props.handleCreate} formInputs={this.props.formInputs}   handleUpdate={this.props.handleUpdate} view={this.props.view}/>
         :
           <p className="quote">"Not all who wander are lost..."</p>

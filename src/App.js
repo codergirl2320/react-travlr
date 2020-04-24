@@ -20,8 +20,8 @@ class App extends React.Component {
     this.state = {
       posts: [],
       view: {
-        pageName: 'gallery',
-        pageTitle: 'Oh, the places I have been...',
+        pageName: 'home',
+        pageTitle: 'home',
       },
       formInputs: {
         id: null,
@@ -35,6 +35,8 @@ class App extends React.Component {
   }
 
   handleView = (view, postData) => {
+    console.log(view)
+    console.log(this.state)
     let pageTitle = ''
     let formInputs = {
       id: null,
@@ -45,11 +47,17 @@ class App extends React.Component {
       year: ''
     }
     switch (view) {
+      case 'gallery':
+        pageTitle = 'gallery'
+        break
+      case 'home':
+        pageTitle = 'home'
+        break
       case 'quote':
-        pageTitle = ''
+        pageTitle = 'quote'
         break
       case 'addPost':
-        pageTitle = 'Where did you go this time?'
+        pageTitle = 'Add Post'
         break
       case 'editPost':
         pageTitle = 'Edit Post'
@@ -71,27 +79,6 @@ class App extends React.Component {
         pageTitle: pageTitle
       },
       formInputs: formInputs
-    })
-  }
-
-  handleViewTwo = (view, postData) => {
-    let pageTitle = ''
-
-    switch (view) {
-      case 'gallery':
-        pageTitle = 'Oh, the places I have been...'
-        break
-      case 'home':
-        pageTitle = ''
-        break
-      default:
-        break
-    }
-    this.setState({
-      view: {
-        pageName: view,
-        pageTitle: pageTitle
-      }
     })
   }
 
@@ -136,7 +123,7 @@ class App extends React.Component {
         'Content-Type': 'application/json'
       }
     }).then(updatedPost => {
-      this.props.handleView('gallery')
+      this.handleView('gallery')
       this.fetchPosts()
     }).catch(err => console.log(err))
   }
@@ -161,7 +148,7 @@ class App extends React.Component {
       <div className='full-container'>
         <Header/>
         <Nav handleView={this.handleView}/>
-        <Aside view={this.state.view} handleView={this.handleView} formInputs={this.state.formInputs} handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete}/>
+        <Aside view={this.state.view} handleView={this.handleView} formInputs={this.state.formInputs} handleCreate={this.handleCreate} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete} posts={this.state.posts}/>
         <Main view={this.state.view} handleView={this.handleView} formInputs={this.state.formInputs} posts={this.state.posts} handleDelete={this.handleDelete}/>
         <Footer/>
       </div>

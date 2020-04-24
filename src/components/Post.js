@@ -14,30 +14,25 @@ class Post extends React.Component {
 
   render(){
     return (
-      <article>
-        <div>
-          {this.props.postData.title}
-        </div>
-        <div className="post-box">
-          <div>
+      <div className="gallery-container">
+        <div className="gallery-post">
+          <div className="gallery-image">
             <img src={this.props.postData.image} alt=""/><br/>
-            <h1>{this.props.postData.location}</h1>
-          </div><br/>
-          <div>
-            {this.props.postData.body}
+          </div>
+          <div className="gallery-info">
+            <h1>{this.props.postData.title}</h1>
+            <h1>{this.props.postData.location}-{this.props.postData.year}</h1>
+            <p>{this.props.postData.body}</p>
+            <div className="gallery-actions">
+              <h4 onClick={() => {this.props.handleView('editPost', this.props.postData)}}>Edit Entry</h4>
+              <h4 onClick={() => {this.props.handleDelete(this.props.postData.id)}}>Delete Entry</h4>
+              <button onClick={this.likedPost}>&hearts;</button>
+              <p>{this.state.likes}</p>
+            </div>
+
           </div>
         </div>
-        <div>
-          <ul>
-            <li onClick={() => {this.props.handleView('editPost', this.props.postData)}}>Edit Entry</li>
-            <li onClick={() => {this.props.handleDelete(this.props.postData.id)}}>Delete Entry</li>
-          </ul>
-        <div>
-          <button onClick={this.likedPost}>&hearts;</button>
-          <p>{this.state.likes}</p>
-        </div>
-        </div>
-      </article>
+      </div>
     )
   }
 }
