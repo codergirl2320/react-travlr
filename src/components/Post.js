@@ -25,8 +25,8 @@ class Post extends React.Component {
               <div className="gallery-actions">
                 <h4 onClick={() => {this.props.handleView('editPost', this.props.postData)}}>EDIT</h4>
                 <h4 onClick={() => {this.props.handleDelete(this.props.postData.id)}}>DELETE</h4>
-                <button onClick={this.likedPost}>&hearts;</button>
-                <p>{this.state.likes}</p>
+                <button className="heart-button" onClick={this.likedPost}>&hearts;</button>
+                <p className="counter">{this.state.likes}</p>
               </div>
             </div>
           </div>
