@@ -41,23 +41,23 @@ class Form extends React.Component {
     return(
       <form className="form-container" onSubmit={this.handleSubmit}>
         <label>
-          <input className="form-input" type="text" placeholder="title" id="title" value={this.state.title} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="Title" id="title" value={this.state.title} onChange={this.handleChange}/><br/>
         </label>
 
         <label>
-          <textarea className="story-form-input" placeholder="body" id="body" value={this.state.body} onChange={this.handleChange}></textarea><br/>
+          <textarea className="story-form-input" placeholder="Body" id="body" value={this.state.body} onChange={this.handleChange}></textarea><br/>
         </label>
 
         <label>
-          <input className="form-input" type="text" placeholder="location" id="location" value={this.state.location} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="Location" id="location" value={this.state.location} onChange={this.handleChange}/><br/>
         </label>
 
         <label>
-          <input className="form-input" type="text" placeholder="image url" id="image" value={this.state.image} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="Image URL" id="image" value={this.state.image} onChange={this.handleChange}/><br/>
         </label>
 
         <label>
-          <input className="form-input" type="text" placeholder="year" id="year" value={this.state.year} onChange={this.handleChange}/><br/>
+          <input className="form-input" type="text" placeholder="Year" id="year" value={this.state.year} onChange={this.handleChange}/><br/>
         </label>
 
         <input type="submit" value="share"/><br/>

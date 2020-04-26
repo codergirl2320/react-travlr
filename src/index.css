@@ -15,6 +15,7 @@
 --ltaqua: #C2D9CB;
 --dkaqua: #9AADA2;
 --gold: #D5AE78;
+--wheat: #eecfb2;
 --ltbrown: #8D6957;
 --dkbrown: #583B36;
 }
@@ -128,7 +129,6 @@ label {
   width: 75%;
   margin: 5px;
   text-align: center;
-  text-transform: uppercase;
   font-family: var(--body-font);
   color: var(--dkaqua);
 }
@@ -142,7 +142,6 @@ label {
   font-size: 1vw;
   padding: 10px;
   box-sizing: border-box;
-  text-transform: uppercase;
   font-family: var(--body-font);
   margin: 5px;
 }
@@ -159,7 +158,6 @@ label {
   font-size: 1vw;
   padding: 10px;
   box-sizing: border-box;
-  text-transform: uppercase;
   font-family: var(--body-font);
   margin: 5px;
 }
@@ -414,19 +412,22 @@ main {
   background: white;
   border-radius: 5px;
   border: 3px solid var(--dkbrown);
-  background-color: var(--gold);
+  background-color: var(--wheat);
 }
 
 .gallery-image img {
   width: 400px;
   height: 260px;
   align-content: center;
-  border: 3px solid var(--dkaqua);
+  border: 3px solid var(--ltbrown);
 }
 
 .gallery-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   text-align: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .gallery-info h1 {
@@ -437,6 +438,17 @@ main {
   margin: 5px auto;
   line-height: 20px;
   color: var(--dkbrown);
+  padding-top: 30px;
+}
+
+.gallery-info p {
+  font-family: var(--body-font);
+  font-size: 1vw;
+  margin: 10px auto;
+  color: var(--dkbrown);
+  padding-top: 20px;
+  padding-bottom: 5px;
+  width: 400px;
 }
 
 .gallery-info h2 {
@@ -445,13 +457,7 @@ main {
   font-style: normal;
   font-size: 2vw;
   margin: 5px auto;
-  color: var(--dkbrown);
-}
-
-.gallery-info p {
-  font-family: var(--body-font);
-  font-size: 1vw;
-  margin: 5px auto;
+  margin-bottom: -20px;
   color: var(--dkbrown);
 }
 
@@ -460,47 +466,28 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  list-style: none;
-  margin: 0 10px;
+  margin: 20px 10px 0 10px;
+  border-top: 2px solid var(--ltbrown);
 }
 
 .gallery-actions h4 {
-  margin: 10px;
+  margin: 5px;
   font-family: 'Montserrat', sans-serif;
-  color: var(--dkbrown);
+  color: var(--dkaqua);
 }
 
-.heart-button {
-  height: 25px;
-  width: 50px;
-  color: var(--dkbrown);
-  border: 2px solid var(--dkbrown);
-  outline: none;
-  font-size: .9em;
-  border-radius: 5%;
-  transition: 0.3s ease-in-out;
-  margin: 10px;
-}
-
-.heart-button:hover {
-  background: var(--ltaqua);
+.gallery-actions h4:hover {
+  color: var(--ltbrown);
   cursor: pointer;
 }
 
-.counter {
-  color: var(--dkbrown);
-  font-family: var(--body-font);
-  margin: 10px;
-  font-size: 2em;
-  font-weight: 800;
-}
 
 /* ================= */
 /*      FOOTER       */
 /* ================= */
 .footer {
   grid-area: footer;
-  position: sticky;
+  position: fixed;
   height: 50px;
   width: 100%;
   bottom: 0;
@@ -511,14 +498,96 @@ main {
 /* ================= */
 /*   MEDIA QUERIES   */
 /* ================= */
-@media (max-width: 380px){
+@media (max-width: 1024px) and (min-width: 376px){
+  .full-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 275px 50px auto;
+    grid-template-areas: "header"
+                         "nav"
+                         "main"
+                         "aside"
+                         "footer";
+  }
+
+  .header-title {
+    position: inherit;
+    font-size: 15vw;
+    margin-top: 75px;
+    margin-left: 27px;
+    line-height: 225px;
+  }
+
+  .aside {
+    height: 475px;
+    margin-bottom: 50px;
+  }
+
+  .quote {
+    font-size: 6.5vw;
+    padding: 85px;
+    vertical-align: middle;
+    margin-top: 20px;
+  }
+
+  .form-container {
+    padding: 15px 10px 0px 10px;
+    margin: 45px auto;
+  }
+
+  .form-input {
+    height: 30px;
+    font-size: 1.5vw;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .story-form-input {
+    width: 100%;
+    height: 100px;
+    font-size: 1.5vw;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .gallery-image img {
+    margin-left: 45px;
+  }
+
+  .gallery-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .gallery-info h1 {
+    font-size: 6vw;
+    margin: 5px auto;
+    line-height: 20px;
+    padding-top: 30px;
+  }
+
+  .gallery-info p {
+    display: none;
+  }
+
+  .gallery-info h2 {
+    font-size: 4vw;
+    margin: 25px auto;
+    margin-bottom: -20px;
+  }
+
+}
+
+@media (max-width: 375px){
   .full-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 225px 13px auto;
     grid-template-areas: "header"
                          "nav"
-                         "main"
                          "main"
                          "aside"
                          "footer";
@@ -562,7 +631,7 @@ main {
 
   .aside {
     height: 200px;
-    /* margin-bottom: 50px; */
+    margin-bottom: 50px;
   }
 
   .quote {
@@ -582,47 +651,63 @@ main {
     border-radius: 0;
   }
 
-  .footer {
-    width: 100%;
-    position: sticky;
+  .form-input {
+    height: 30px;
+    font-size: 3vw;
+    padding: 10px;
+    margin: 5px;
   }
+
+  .story-form-input {
+    width: 100%;
+    height: 125px;
+    font-size: 3vw;
+    padding: 10px;
+    margin: 5px;
+  }
+
+
 
 
 
 
   .gallery-post {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    width: 95%;
-    height: 430px;
+    width: 350px;
+    height: 400px;
     margin: 10px;
     padding: 15px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 3px solid var(--dkbrown);
-    background-color: var(--gold);
+    background-color: var(--wheat);
   }
 
   .gallery-image img {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 200px;
     justify-content: center;
   }
 
   .gallery-info {
     text-align: center;
     margin: 0 auto;
+    width: 300px;
   }
 
   .gallery-info h1 {
     font-family: var(--title-font);
     font-weight: 200;
     font-style: normal;
-    font-size: 8vw;
+    font-size: 9vw;
     margin: 5px auto;
     line-height: 20px;
+  }
+
+  .gallery-info p {
+    display: none;
   }
 
   .gallery-info h2 {
@@ -645,14 +730,6 @@ main {
     margin: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 3vw;
-  }
-
-  .counter {
-    color: var(--dkbrown);
-    font-family: var(--body-font);
-    margin: 10px;
-    font-size: 19vw;
-    font-weight: 800;
   }
 
 }
