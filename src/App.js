@@ -93,7 +93,7 @@ class App extends React.Component {
     }).then(createdPost => {
       return createdPost.json()
     }).then(jsonedPost => {
-      this.handleView('quote')
+      this.handleView('gallery')
       this.setState(prevState => {
         prevState.posts = jsonedPost
         return {posts: prevState.posts

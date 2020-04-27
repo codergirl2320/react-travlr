@@ -54,7 +54,6 @@ html, body {
   left: 50%;
   transform: translate(-50%, -40%);
   width: 100%;
-  opacity: 70%;
 }
 
 .header-title {
@@ -610,10 +609,6 @@ main {
                          "eleven eleven"
                          "thirteen twelve"
                          ;
-  }
-
-  .header-image {
-    opacity: 60%;
   }
 
   .header-title {
