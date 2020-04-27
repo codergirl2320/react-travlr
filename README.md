@@ -5,36 +5,34 @@
 ## About
 Link to [Travlr](https://travlr-project.herokuapp.com/)
 
-Because of COVID-19, all of our favorite "Secret Life of Pets" character’s humans are home - ALL DAY - preventing them from doing ALL the activities they normally enjoy while their owners work…not to mention sneaking out to see each other. And they are NOT happy about it! So they decided to start a blog to communicate - and COMPLAIN…
+This site is for amateur photographers who are also travel enthusiasts! They can post their favorite pictures and have a personal record of all the places they've been.
 
 ----
 ## Approach Taken
-1. Evaluate the strengths of the team members.
-2. Begin Agile approach by assigning backend and frontend files.
-3. Meet MVP as soon as possible.
-3. Work on stretch goals.
-4. Test every day and debug.
+1. 
+2. 
+3. 
+3. 
+4. 
 
 ----
 ## Technologies Used
 * React.js
 * PHP
-* CSS
+* CSS Grid
 * GitHub
 * Heroku
-* Trello
 
 ----
 ## User Stories
-* As a user, I can post messages to my friends.
-* As a user, I can like my friends posts.
+* As a user, I can post my images and stories.
 * As a user, I can edit my posts.
 * As a user, I can delete posts.
 
 ----
 ## Wireframe
 
-![alt text](https://i.imgur.com/AiFzdxW.png)
+![alt text](https://i.imgur.com/x1a9TF7.png)
 
 ----
 ## Resources
@@ -48,8 +46,3 @@ Because of COVID-19, all of our favorite "Secret Life of Pets" character’s hum
  * FAVPNG (https://favpng.com/)	(free PNG files)
  * IMGBIN (https://imgbin.com/)	(free PNG files)
 
-----
-## :star2: The 'Secret Blog of Pets' Team
-* Tania Dodson
-* Reshae Alagbada
-* Stephen Linfield
