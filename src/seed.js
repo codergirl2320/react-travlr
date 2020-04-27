@@ -74,7 +74,7 @@ Located in one of the beautiful squares of Arles. Where Vincent Van Gogh lived a
 
 Arles, France
 
-/images/French_square.jpeg
+/images/French_square_crop.jpeg
 
 
 
@@ -94,7 +94,7 @@ An ancient medieval fortress overlooking the most AWESOME village...I could have
 
 Les Baux-de-Provence, France
 
-/images/Les_Baux_de_Provence.jpeg
+/images/Les_Baux_de_Provence_crop.jpeg
 
 
 
@@ -104,7 +104,7 @@ One of my favorite sights...The Pantheon...a former Roman temple, now a Catholic
 
 Rome, Italy
 
-/images/Pantheon.jpeg
+/images/Pantheon_crop.jpeg
 
 
 
@@ -124,7 +124,7 @@ One of MANY of Gaudi's iincredible works - which were my main focus during our s
 
 Barcelona, Spain
 
-/images/Sagrada_Familia_other_side.jpeg
+/images/Sagrada_Familia_crop.jpeg
 
 
 
@@ -154,7 +154,7 @@ So cool that the Pope decided to make an appearance the morning we were there...
 
 Rome, Italy
 
-/images/St_Peters_Basilica.jpeg
+/images/St_Peters_Basilica_crop.jpeg
 
 
 
@@ -164,4 +164,4 @@ I could float around and stare at all the buildings and all the businesses forev
 
 Venice, Italy
 
-/images/Venice_waterway.jpeg
+/images/Venice_waterway_crop.jpeg
