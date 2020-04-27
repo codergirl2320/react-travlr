@@ -20,9 +20,9 @@ This site is for amateur photographers who are also travel enthusiasts! They can
 
 ----
 ## Technologies Used
+* CSS Grid
 * React.js
 * PHP
-* CSS Grid
 * GitHub
 * Heroku
 
