@@ -33,7 +33,7 @@ This site is for amateur photographers who are also travel enthusiasts! They can
 * As a user, I can delete posts.
 
 ----
-## Wireframe
+## Wireframes
 
 ![alt text](https://i.imgur.com/x1a9TF7.png)
 
