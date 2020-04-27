@@ -43,7 +43,9 @@ This site is for amateur photographers who are also travel enthusiasts! They can
  * Adobe Photoshop (to manipulate images)
  * Adobe InDesign (to create color palette from the header image)
  * Adobe Color (https://color.adobe.com/create) (to manipulate the color palette)
- * Google Fonts (https://fonts.google.com/)
- * Adobe Fonts (https://fonts.adobe.com/)
  * Adobe Stock (https://stock.adobe.com/) (for header image)
+ * Adobe Fonts (https://fonts.adobe.com/)
+ * Google Fonts (https://fonts.google.com/)
+
+
 
