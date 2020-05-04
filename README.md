@@ -1,68 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-travlr
 
-## Available Scripts
+![Travlr](https://i.imgur.com/uJXI0X0.png)
 
-In the project directory, you can run:
+## About
+Link to [Travlr](https://travlr-project.herokuapp.com/)
 
-### `npm start`
+This site is for amateur photographers who are also travel enthusiasts! They can post their favorite pictures and have a personal record of all the places they've been.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+----
+## Approach Taken
+1. Get "bare bones" files deployed to Heroku ASAP.
+2. Code the basic PHP backend files.
+3. Code the basic React.js frontend files.
+3. Get the front and back ends communicating.
+4. Rearrange the components to suit my plan.
+5. Watch videos and read articles to learn the basics of CSS Grid.
+6. Style, style, style.
+7. Bug hunt as necessary.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+----
+## Technologies Used
+* CSS Grid
+* React.js
+* PHP
+* GitHub
+* Heroku
 
-### `npm test`
+----
+## User Stories
+* As a user, I can post my images and stories.
+* As a user, I can edit my posts.
+* As a user, I can delete posts.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+----
+## Wireframes
 
-### `npm run build`
+![alt text](https://i.imgur.com/x1a9TF7.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----
+## Resources
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+ * Adobe Photoshop (to manipulate images)
+ * Adobe InDesign (to create color palette from the header image)
+ * Adobe Color (https://color.adobe.com/create) (to manipulate the color palette)
+ * Adobe Stock (https://stock.adobe.com/) (for header image)
+ * Adobe Fonts (https://fonts.adobe.com/)
+ * Google Fonts (https://fonts.google.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
