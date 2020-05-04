@@ -165,3 +165,97 @@ I could float around and stare at all the buildings and all the businesses forev
 Venice, Italy
 
 /images/Venice_waterway_crop.jpeg
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+
+class Home extends React.Component {
+  constructor(){
+    super()
+
+    this.onClickForward = this.onClickForward.bind(this)
+    this.onClickForward2 = this.onClickForward2.bind(this)
+
+    const img0 = require('./images/IMG_1.jpeg');
+    const img1 = require('./images/IMG_5.jpeg');
+    const img2 = require('./images/IMG_2.jpeg');
+
+    const img3 = require('./images/IMG_3.jpeg');
+    const img4 = require('./images/IMG_4.jpeg');
+    const img5 = require('./images/IMG_6.jpeg');
+    const img6 = require('./images/IMG_7.jpeg');
+
+    this.state = {
+      index: 0,
+      imgList: [img0, img1, img2],
+      imgList2: [img3, img4, img5, img6]
+    }
+  }
+
+  onClickForward() {
+    if (this.state.index + 1 === this.state.imgList.length) {
+      this.setState({
+        index: 0
+      })
+    } else {
+      this.setState({
+        index: this.state.index + 1
+      })
+    }
+  }
+
+  onClickForward2() {
+    if (this.state.index + 1 === this.state.imgList2.length) {
+      this.setState({
+        index: 0
+      })
+    } else {
+      this.setState({
+        index: this.state.index + 1
+      })
+    }
+  }
+
+  render(){
+    return(
+      <span className="home-grid">
+        <div className="one"><img src="./images/Capri.jpeg" alt=""/></div>
+        <div className="two">Barcelona</div>
+        <div className="three"><img src="./images/Sagrada_Familia_detail.jpeg" alt=""/></div>
+        <div className="four"><img src="./images/Pompeii.jpeg" alt=""/></div>
+        <div className="five">Istanbul</div>
+        <div className="six"><img src="./images/Barcelona_windows.jpeg" alt=""/></div>
+        <div className="seven"><img src="./images/French_bakery.jpeg" alt=""/></div>
+
+        <div className="eight">
+          <img onClick={this.onClickForward} src={this.state.imgList[this.state.index]} alt=""/>
+        </div>
+
+        <div className="nine">Venice</div>
+        <div className="ten"><img src="./images/Mary_statue.jpeg" alt=""/></div>
+
+        <div className="eleven">
+          <img onClick={this.onClickForward2} src={this.state.imgList2[this.state.index]} alt=""/>
+        </div>
+
+        <div className="twelve">Arles</div>
+        <div className="thirteen"><img src="./images/St_Sophia.jpeg" alt=""/></div>
+        <div className="fourteen"><img src="./images/gondola_bridge.jpeg" alt=""/></div>
+        <div className="fifteen"><img src="./images/Pompei_person.jpeg" alt=""/></div>
+        <div className="sixteen">Pisa</div>
+        <div className="seventeen">Pompeii</div>
+        <div className="eighteen"><img src="./images/Sistine_Chapel.jpeg" alt=""/></div>
+      </span>
+    )
+  }
+}
+
+export default Home

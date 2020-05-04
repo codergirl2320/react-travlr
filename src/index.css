@@ -235,6 +235,12 @@ input[type="submit"]:hover {
   line-height: 150px;
 }
 
+.two:hover {
+  color: var(--ltaqua);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
 .three {
   grid-area: three;
   background-color: var(--ltbrown);
@@ -262,6 +268,12 @@ input[type="submit"]:hover {
   color: var(--dkbrown);
   line-height: 150px;
   padding-right: 10px;
+}
+
+.five:hover {
+  color: var(--gold);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .six {
@@ -302,6 +314,12 @@ input[type="submit"]:hover {
   line-height: 150px;
 }
 
+.nine:hover {
+  color: var(--gold);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
 .ten {
   grid-area: ten;
   background-color: var(--ltaqua);
@@ -329,6 +347,12 @@ input[type="submit"]:hover {
   font-size: 2.5vw;
   color: var(--dkbrown);
   line-height: 150px;
+}
+
+.twelve:hover {
+  color: var(--ltaqua);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .thirteen {
@@ -360,9 +384,16 @@ input[type="submit"]:hover {
   background-color: var(--ltaqua);
   font-family: var(--title-font);
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   color: var(--dkbrown);
-  line-height: 150px;
+  line-height: 30px;
+  padding-top: 55px;
+}
+
+.sixteen:hover {
+  color: var(--gold);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .seventeen {
@@ -370,9 +401,15 @@ input[type="submit"]:hover {
   background-color: var(--ltbrown);
   font-family: var(--title-font);
   text-align: center;
-  font-size: 2.5vw;
+  font-size: 2.1vw;
   color: var(--dkbrown);
   line-height: 150px;
+}
+
+.seventeen:hover {
+  color: var(--ltaqua);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .eighteen {
