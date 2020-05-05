@@ -133,6 +133,7 @@ label {
 }
 
 .form-input {
+  width: 100%;
   background-color: white;
   border: none;
   height: 40px;
@@ -146,6 +147,7 @@ label {
 }
 
 .story-form-input {
+  width: 100%;
   color: var(--dkaqua);
   background-color: white;
   border: none;
@@ -164,9 +166,9 @@ label {
 input[type="text"] {
   display: inline-block;
   padding: 10px;
-  width: 100%;
+  /* width: 100%; */
   border-radius: 5px;
-  margin: 5px;
+  /* margin: 5px; */
   color: var(--dkaqua);
 }
 
@@ -435,6 +437,23 @@ main {
   grid-template-areas: "maintwo";
 }
 
+.search-input {
+  width: 250px;
+  background-color: white;
+  border: none;
+  height: 35px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1vw;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  margin: 5px;
+  justify-self: end;
+  margin-right: 14px;
+  margin-top: 15px;
+}
+
 .gallery-post {
   display: flex;
   flex-direction: row;
@@ -586,6 +605,10 @@ main {
     margin: 5px;
   }
 
+  .search-input {
+    font-size: 1.5vw;
+  }
+
   .gallery-image img {
     margin-left: 45px;
   }
@@ -698,7 +721,10 @@ main {
     margin: 5px;
   }
 
-
+  .search-input {
+    font-size: 3vw;
+    justify-self: center;
+  }
 
 
 
